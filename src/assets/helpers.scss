@@ -1,0 +1,369 @@
+html > body .v-application {
+  .elevation-special {
+    z-index: 1;
+    box-shadow: 0 0px 9px 12px var(--v-bg-base);
+  }
+
+  .overflow-auto > * {
+    background-color: transparent;
+  }
+
+  .scroll-shadow-element .elevation-special {
+    position: sticky;
+    left: 0;
+    right: 0px;
+    height: 0px;
+    transition: opacity 0.3s;
+    z-index: 5;
+    &:last-child {
+      bottom: 0px;
+      position: sticky;
+    }
+  }
+
+  @for $i from 2 through 12 {
+    @for $j from 1 through 12 {
+      @if $j < $i{
+        & .w-#{$j}\/#{$i} {
+          width: calc(100% / #{$i / $j}) !important
+        }
+      }
+    }
+  }
+  .w-full {
+    width: 100%;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .h-auto {
+    height: auto;
+  }
+  .h-min-0 {
+    min-height: 0%;
+  }
+  .h-min-full {
+    min-height: 100%;
+  }
+  .relative {
+    position: relative;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .cursor-default{
+    cursor: default;
+  }
+  .absolute {
+    position: absolute;
+  }
+}
+
+@for $j from 1 through 10 {
+  html > body .v-application .w-#{$j} {
+    width: #{5 * $j + 'vw'} !important;
+  }
+}
+
+@for $j from 0 through 30 {
+  html > body .v-application .pa-#{$j} {
+    padding: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .py-#{$j} {
+    padding-top: #{0.25 * $j + 'rem'} !important;
+    padding-bottom: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .px-#{$j} {
+    padding-left: #{0.25 * $j + 'rem'} !important;
+    padding-right: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .pt-#{$j} {
+    padding-top: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .pb-#{$j} {
+    padding-bottom: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .pl-#{$j} {
+    padding-left: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .pr-#{$j} {
+    padding-right: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .ma-#{$j} {
+    margin: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .my-#{$j} {
+    margin-top: #{0.25 * $j + 'rem'} !important;
+    margin-bottom: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .mx-#{$j} {
+    margin-left: #{0.25 * $j + 'rem'} !important;
+    margin-right: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .mt-#{$j} {
+    margin-top: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .mb-#{$j} {
+    margin-bottom: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .ml-#{$j} {
+    margin-left: #{0.25 * $j + 'rem'} !important;
+  }
+  html > body .v-application .mr-#{$j} {
+    margin-right: #{0.25 * $j + 'rem'} !important;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  @for $i from 2 through 12 {
+    @for $j from 1 through 12 {
+      @if $j <= $i{
+        html > body .v-application .w-sm-#{$j}\/#{$i} {
+          width: calc(100% / #{$i / $j}) !important
+        }
+      }
+    }
+  }
+
+  @for $j from 0 through 30 {
+    html > body .v-application .pa-sm-#{$j} {
+      padding: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .py-sm-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .px-sm-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pt-sm-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pb-sm-#{$j} {
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pl-sm-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pr-sm-#{$j} {
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .ma-sm-#{$j} {
+      margin: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .my-sm-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mx-sm-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mt-sm-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mb-sm-#{$j} {
+      margin-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .ml-sm-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mr-sm-#{$j} {
+      margin-right: #{0.25 * $j + 'rem'} !important;
+    }
+  }
+}
+@media screen and (min-width: 960px) {
+  @for $i from 2 through 12 {
+    @for $j from 1 through 12 {
+      @if $j <= $i{
+        html > body .v-application .w-md-#{$j}\/#{$i} {
+          width: calc(100% / #{$i / $j}) !important
+        }
+      }
+    }
+  }
+  @for $j from 0 through 30 {
+    html > body .v-application .pa-md-#{$j} {
+      padding: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .py-md-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .px-md-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pt-md-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pb-md-#{$j} {
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pl-md-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pr-md-#{$j} {
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+
+    html > body .v-application .ma-md-#{$j} {
+      margin: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .my-md-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mx-md-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mt-md-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mb-md-#{$j} {
+      margin-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .ml-md-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mr-md-#{$j} {
+      margin-right: #{0.25 * $j + 'rem'} !important;
+    }
+  }
+}
+@media screen and (min-width: 1274px) {
+  @for $i from 2 through 12 {
+    @for $j from 1 through 12 {
+      @if $j <= $i{
+        html > body .v-application .w-lg-#{$j}\/#{$i} {
+          width: calc(100% / #{$i / $j}) !important
+        }
+      }
+    }
+  }
+  @for $j from 0 through 30 {
+    html > body .v-application .pa-lg-#{$j} {
+      padding: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .py-lg-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .px-lg-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pt-lg-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pb-lg-#{$j} {
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pl-lg-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pr-lg-#{$j} {
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+
+    html > body .v-application .ma-lg-#{$j} {
+      margin: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .my-lg-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mx-lg-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mt-lg-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mb-lg-#{$j} {
+      margin-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .ml-lg-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mr-lg-#{$j} {
+      margin-right: #{0.25 * $j + 'rem'} !important;
+    }
+  }
+}
+@media screen and (min-width: 1904px){
+  @for $i from 2 through 12 {
+    @for $j from 1 through 12 {
+      @if $j <= $i{
+        html > body .v-application .w-xl-#{$j}\/#{$i} {
+          width: calc(100% / #{$i / $j}) !important
+        }
+      }
+    }
+  }
+  @for $j from 0 through 30 {
+    html > body .v-application .pa-xl-#{$j} {
+      padding: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .py-xl-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .px-xl-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pt-xl-#{$j} {
+      padding-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pb-xl-#{$j} {
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pl-xl-#{$j} {
+      padding-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .pr-xl-#{$j} {
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+
+    html > body .v-application .ma-xl-#{$j} {
+      margin: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .my-xl-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+      padding-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mx-xl-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+      padding-right: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mt-xl-#{$j} {
+      margin-top: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mb-xl-#{$j} {
+      margin-bottom: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .ml-xl-#{$j} {
+      margin-left: #{0.25 * $j + 'rem'} !important;
+    }
+    html > body .v-application .mr-xl-#{$j} {
+      margin-right: #{0.25 * $j + 'rem'} !important;
+    }
+  }
+}
+
+.sticky {
+  position: sticky;
+}
+.t-0 {
+  top: 0;
+}
+
+@for $i from 0 through 12 {
+  .z-#{$i} {
+    z-index: $i !important;
+  }
+}

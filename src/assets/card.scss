@@ -1,0 +1,26 @@
+.v-card {
+  .v-card__title + .v-card__text {
+    padding-top: .75rem;
+  }
+  .v-card__title {
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    letter-spacing: .0125rem !important;
+    line-height: 2rem !important;
+  }
+  .v-card__text {
+    font-size: 1rem !important;
+  }
+}
+
+.v-dialog {
+  & > .v-card.theme--light {
+    background-color: var(--v-bg-base) !important;
+    border-color: var(--v-bg-base) !important;
+    & > .v-card__actions {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+  }
+}

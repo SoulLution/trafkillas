@@ -1,0 +1,67 @@
+.v-calendar-weekly__day {
+  padding: 0 3px !important;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -1px;
+    border-right: 1px solid #e0e0e0;
+    // z-index: 1;
+  }
+}
+.v-calendar {
+  width: 100%;
+}
+.v-calendar .v-event {
+  margin-left: 3.5% !important;
+  border-radius: 6px !important;
+}
+.v-calendar-weekly__head-weekday, .v-calendar-daily_head-weekday {
+  height: 2em !important;
+  position: relative;
+  &:after {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    padding-top: .5em; 
+    top: 0;
+    bottom: 0;
+    color: inherit;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+  }
+  &.v-outside:after {
+    background-color: #f7f7f7;
+  }
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}):after {
+      content: var(#{'--day-' + $i});
+    }
+  }
+}
+.v-calendar-daily_head-day {
+  & .v-calendar-daily_head-weekday:after {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 0;
+    bottom: 0;
+    color: inherit;
+    background-color: white;
+    text-align: center;
+    vertical-align: middle;
+  }
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) .v-calendar-daily_head-weekday:after {
+      content: var(#{'--day-' + $i});
+    }
+  }
+}
+.v-calendar-weekly__day-label{
+  margin-bottom: 2px !important;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+}

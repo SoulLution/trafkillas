@@ -1,0 +1,70 @@
+@import "./mixins.scss";
+.theme--light.v-skeleton-loader .v-skeleton-loader__actions, .theme--light.v-skeleton-loader .v-skeleton-loader__article, .theme--light.v-skeleton-loader .v-skeleton-loader__card-text, .theme--light.v-skeleton-loader .v-skeleton-loader__date-picker, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item-avatar, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item-avatar-three-line, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item-avatar-two-line, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item-text, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item-three-line, .theme--light.v-skeleton-loader .v-skeleton-loader__list-item-two-line, .theme--light.v-skeleton-loader .v-skeleton-loader__table-heading, .theme--light.v-skeleton-loader .v-skeleton-loader__table-tbody, .theme--light.v-skeleton-loader .v-skeleton-loader__table-tfoot, .theme--light.v-skeleton-loader .v-skeleton-loader__table-thead {
+  background-color: var(--v-bg-base) !important;
+}
+.v-skeleton-loader > .v-skeleton-loader__heading {
+  height: 32px;
+}
+.v-skeleton-loader {
+  width: 100%;
+}
+.v-skeleton-loader__table-thead {
+  padding: 1rem 0 !important;
+  & > .v-skeleton-loader__heading {
+    max-width: 16% !important;
+  }
+}
+.v-skeleton-loader__table-row {
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-around;
+  & .v-skeleton-loader__table-cell {
+    width: 16%;
+    padding: 0 0.5rem;
+  }
+}
+.v-skeleton-loader.card {
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  @include elevation-base;
+  &>* {
+    & *{
+      margin: 0 !important;
+    }
+    &:first-child {
+      width: 100%;
+    }
+  }
+  & .v-skeleton-loader__table-cell {
+    width: 50%;
+    height: auto;
+    padding: 1rem 0;
+    &:nth-child(5), &:nth-child(8) {
+      width: 100%;
+    }
+    &:nth-child(6), &:nth-child(9), &:nth-child(11) {
+      padding-right: 0.5rem;
+    }
+    &:nth-child(7), &:nth-child(10), &:nth-child(12) {
+      padding-left: 0.5rem;
+    }
+    & .v-skeleton-loader__text {
+      height: 56px;
+    }
+  }
+}
+.v-skeleton-loader__table-row{
+  margin-bottom: 1rem;
+  background: white;
+  border-radius: 6px !important;
+  border: 1px solid #D4D4D4 !important;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15) !important;
+}
+.v-skeleton-loader__table-row-divider {
+  & .v-skeleton-loader__text {
+    margin: 0 0.5rem;
+  }
+}

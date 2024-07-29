@@ -1,0 +1,16 @@
+.v-tabs {
+  flex-grow: 0 !important;
+  margin-bottom: .75rem;
+  .v-tabs-bar {
+    background-color: transparent !important;
+  }
+}
+.v-tabs-items {
+  padding: .5rem;
+  margin: 0 -.5rem .1rem;
+  max-width: none !important;
+  height: auto;
+}
+html > body .v-application .theme--light.v-tabs-items {
+  background-color: transparent;
+}
