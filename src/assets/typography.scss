@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html .v-application * {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+html > body .v-application {
+  // Меню навигации
+  & .group .sub-group {
+    font-size: 1.166rem !important;
+    text-transform: uppercase;
+    color: hsla(0,0%,100%,.7);
+    font-weight: 300;
+  }
+  & .vertical-drawer .v-list--dense .v-list-item .static-text {
+    font-size: 1rem !important;
+    color: #fff;
+    font-weight: 400;
+  }
+  
+  & .sub-navigation .v-list-item-group:not(.no-nav, .no-navigation) .static-text,
+  & .auxilarium .v-list-item-group:not(.no-nav, .no-navigation) .static-text  {
+    font-size: 1rem !important;
+    font-weight: 400;
+    min-width: 92%;
+  }
+  & .vertical .static-title, & .v-dialog > .v-card > .v-card__title {
+    font-size: 1.33rem;
+    letter-spacing: .0125em;
+    text-transform: uppercase;
+    line-height: 2rem;
+    color: rgba(0,0,0,.87);
+    font-weight: 400;
+  }
+
+  // Карточка
+  & .v-card .v-card__title {
+    font-size: 1.33rem;
+    font-weight: 400;
+    letter-spacing: 0.0125rem;
+    line-height: 2rem;
+    color: rgba(0,0,0,.87);
+  }
+  & .v-dialog .v-card__text .v-card .v-card__title {
+    padding: 1.33rem 1.5rem 0.833rem !important;
+    font-size: 1.33rem;
+    font-weight: 400;
+    letter-spacing: 0.0125rem;
+    line-height: 2rem;
+    color: rgba(0,0,0,.87);
+  }
+  & .v-card > .v-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    letter-spacing: 0.005em;
+    color: rgba(0,0,0,.6);
+  }
+  & .v-input {
+    & input, & textarea, & select {
+      font-size: 1.166rem;
+      line-height: 20px;
+      color: rgba(0,0,0,.87);
+      &::placeholder {
+        font: 1.166rem;
+      }
+    }
+    & .v-label {
+      font-size: 1.25rem;
+      color: rgba(0,0,0,.6);
+      line-height: 20px;
+      letter-spacing: normal;
+      transform: font-size 0s;
+    }
+  }
+  // Таблицы
+  & .view-table, .edit-table, .excel-table, .group-table {
+    & thead th {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.6);
+    }
+    & tbody td {
+      font-size: 1.166rem;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+      font-weight: 400;
+      color: rgba(0,0,0,.87);
+      & .subtitle, & > .row span:nth-child(3) {
+        font-size: 1rem;
+        line-height: 130%;
+        letter-spacing: 0.01em;
+        font-weight: 300;
+        color: #3E4C4B;
+      }
+    }
+  }
+
+  // Тулбар
+  & .toolbar-element {
+    & .v-btn .v-btn-content {
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 500;
+      letter-spacing: .0892857143em;
+      color: rgba(0,0,0,.87);
+    }
+    & .toolbar-title {
+      font-size: 1.33rem;
+      font-weight: 400;
+      letter-spacing: 0.0125rem;
+      line-height: 2rem;
+      color: rgba(0,0,0,.87);
+      text-align: left;
+    }
+  }
+  & .toolbar-title {
+    font-size: 1.33rem;
+    font-weight: 400;
+    letter-spacing: 0.0125rem;
+    line-height: 2rem;
+    color: rgba(0,0,0,.87);
+    text-align: left;
+  }
+
+  // Табы
+  & .v-tabs .v-tab {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: .0892857143em;
+    color: rgba(0,0,0,.54);
+    &.v-tab--active {
+      color: var(--v-primary-base);
+    }
+  }
+  & .static-text {
+    font-size: 1.166rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.005em;
+    color: rgba(0, 0, 0, 0.87);
+    display: block;
+    vertical-align: baseline;
+    align-items: center;
+    &.higher {
+      font-weight: 600;
+      color: #3E4C4B;
+    }
+  }
+  & .vertical .the-account .static-title, .static-title {
+    font-size: 1.833rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0.015em;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  & .static-subtext {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 130%;
+    letter-spacing: 0.015em;
+    color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+  }
+  
+  & .sub-group-text {
+    font-size: 1.166rem !important;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+}
+
+.v-application .v-list--dense .v-list-item .v-list-item__subtitle, .v-application .v-list--dense .v-list-item .v-list-item__title,
+.v-application .v-list-item--dense .v-list-item__subtitle, .v-application .v-list-item--dense .v-list-item__title {
+  font-size: 1rem !important;
+}

@@ -1,0 +1,50 @@
+.v-input.search {
+  height: 2.75rem;
+  background-color: transparent !important;
+  border-radius: 8px;
+  & input {
+    &:focus::placeholder {
+      color: #858C94;
+      opacity: 0.4;
+    }
+    &::placeholder {
+      transition: 0.3s;
+      color: transparent;
+    }
+    & .v-text-field__details {
+      overflow: visible;
+    }
+    & .v-messages {
+      width: auto;
+      display: block;
+      flex: 0 0 auto;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 6px;
+      min-width: 0;
+      & .v-messages__message {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        color: white;
+      }
+    }
+  }
+}
+.v-text-field.search{
+  max-width: 180px;
+  transition: 0.3s;
+  &>.v-input__control{
+    min-height: 32px !important;
+  }
+  &.v-input--is-focused{
+    max-width: 450px !important;
+  }
+  &:hover {
+    max-width: 190px;
+    & input::placeholder {
+      color: #858C94;
+    }
+    & > .v-input__control > .v-input__slot >*:first-child {
+      animation: search 0.5s linear 1;
+    }
+  }
+}

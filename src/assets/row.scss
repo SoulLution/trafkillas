@@ -1,0 +1,8 @@
+.row {
+  @for $j from 1 through 12 {
+    .col-#{$j}, .col-md-#{$j} {
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
+    }
+  }
+}
